@@ -5,7 +5,7 @@ $username = 'root';
 $password = 'Admin1234#@';
 $dbname = 'crud_app';
 
-$base_address = "http://localhost/session/";
+$base_address = "http://localhost/session_working/";
 
 $config = mysqli_connect($hostname,$username,$password,$dbname);
 

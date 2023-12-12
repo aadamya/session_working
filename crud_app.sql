@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 12, 2023 at 01:56 AM
+-- Generation Time: Dec 12, 2023 at 09:37 PM
 -- Server version: 8.0.35-0ubuntu0.22.04.1
 -- PHP Version: 7.4.33
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `crud_app`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `file_uploads`
+--
+
+CREATE TABLE `file_uploads` (
+  `id` int NOT NULL,
+  `pic_title` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `file_location` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `upload_Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `file_uploads`
+--
+
+INSERT INTO `file_uploads` (`id`, `pic_title`, `file_location`, `upload_Date`) VALUES
+(1, 'Robin', 'http://localhost/session_working/uploads/robin.jpeg', '2023-12-12 15:42:47'),
+(2, 'Robin', 'http://localhost/session_working/uploads/robin.jpeg', '2023-12-12 15:46:46');
 
 -- --------------------------------------------------------
 
@@ -54,6 +75,12 @@ INSERT INTO `user_details` (`id`, `username`, `email`, `address`, `password`, `l
 --
 
 --
+-- Indexes for table `file_uploads`
+--
+ALTER TABLE `file_uploads`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user_details`
 --
 ALTER TABLE `user_details`
@@ -62,6 +89,12 @@ ALTER TABLE `user_details`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `file_uploads`
+--
+ALTER TABLE `file_uploads`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_details`
